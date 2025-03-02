@@ -4,5 +4,9 @@ function solution(arr) {
         count++;
     }
     
-    return [...arr, ...new Array(2**count-arr.length).fill(0)];
+    while(arr.length!==2**count){
+        arr.push(0)
+    }
+    
+    return arr;
 }
